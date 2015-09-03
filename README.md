@@ -37,3 +37,6 @@ Instructions:
    contains a list of the tokens, while the dependency_parsed_body field contains a list of dependencies.  Each dependency
    consists of the relation, the head, and the dependent.  The list of dependencies constitute a dependency parse tree for
    the sentence.  Example output can be found in the output directory.
+
+To use StanfordCoreNLPWrapper in a different repo, just move the jar files into your repo.  The necessary jars are listed in
+the second parameter to startJVM in JPypeExample.
