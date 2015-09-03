@@ -25,7 +25,7 @@ Instructions:
    4. Lastly, you can modify the parameters passed to wrapper.tokenizeAndDepParse.  The first parameter and second parameters
       specify the input and output file/directories, respectively, while the third parameter is the number of threads to use.
       Example input files can be found under the data directory, while by convention, you should put the output files in the
-      'output' directory.  IF you want to process only a single input file containing JSONified Gmail emails, the first 
+      'output' directory.  If you want to process only a single input file containing JSONified Gmail emails, the first 
       parameter should be the path to the input .json file, while the second parameter should be path to the output .json 
       file. If you want to process multiple files, create a .txt file with each line spelling out the path to an input .json 
       file.  The first parameter to wrapper.tokenizeAndDepParse should then be the path to the .txt file, while the second 
