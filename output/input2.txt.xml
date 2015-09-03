@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Stanford</word>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>8</CharacterOffsetEnd>
+            <POS>NNP</POS>
+          </token>
+          <token id="2">
+            <word>University</word>
+            <CharacterOffsetBegin>9</CharacterOffsetBegin>
+            <CharacterOffsetEnd>19</CharacterOffsetEnd>
+            <POS>NNP</POS>
+          </token>
+          <token id="3">
+            <word>is</word>
+            <CharacterOffsetBegin>20</CharacterOffsetBegin>
+            <CharacterOffsetEnd>22</CharacterOffsetEnd>
+            <POS>VBZ</POS>
+          </token>
+          <token id="4">
+            <word>located</word>
+            <CharacterOffsetBegin>23</CharacterOffsetBegin>
+            <CharacterOffsetEnd>30</CharacterOffsetEnd>
+            <POS>VBN</POS>
+          </token>
+          <token id="5">
+            <word>in</word>
+            <CharacterOffsetBegin>31</CharacterOffsetBegin>
+            <CharacterOffsetEnd>33</CharacterOffsetEnd>
+            <POS>IN</POS>
+          </token>
+          <token id="6">
+            <word>California</word>
+            <CharacterOffsetBegin>34</CharacterOffsetBegin>
+            <CharacterOffsetEnd>44</CharacterOffsetEnd>
+            <POS>NNP</POS>
+          </token>
+          <token id="7">
+            <word>.</word>
+            <CharacterOffsetBegin>44</CharacterOffsetBegin>
+            <CharacterOffsetEnd>45</CharacterOffsetEnd>
+            <POS>.</POS>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (NP (NNP Stanford) (NNP University)) (VP (VBZ is) (VP (VBN located) (PP (IN in) (NP (NNP California))))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="nn">
+            <governor idx="2">University</governor>
+            <dependent idx="1">Stanford</dependent>
+          </dep>
+          <dep type="nsubjpass">
+            <governor idx="4">located</governor>
+            <dependent idx="2">University</dependent>
+          </dep>
+          <dep type="auxpass">
+            <governor idx="4">located</governor>
+            <dependent idx="3">is</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="4">located</governor>
+            <dependent idx="5">in</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="5">in</governor>
+            <dependent idx="6">California</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="nn">
+            <governor idx="2">University</governor>
+            <dependent idx="1">Stanford</dependent>
+          </dep>
+          <dep type="nsubjpass">
+            <governor idx="4">located</governor>
+            <dependent idx="2">University</dependent>
+          </dep>
+          <dep type="auxpass">
+            <governor idx="4">located</governor>
+            <dependent idx="3">is</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="4">located</governor>
+            <dependent idx="6">California</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="nn">
+            <governor idx="2">University</governor>
+            <dependent idx="1">Stanford</dependent>
+          </dep>
+          <dep type="nsubjpass">
+            <governor idx="4">located</governor>
+            <dependent idx="2">University</dependent>
+          </dep>
+          <dep type="auxpass">
+            <governor idx="4">located</governor>
+            <dependent idx="3">is</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="4">located</governor>
+            <dependent idx="6">California</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+      <sentence id="2">
+        <tokens>
+          <token id="1">
+            <word>It</word>
+            <CharacterOffsetBegin>46</CharacterOffsetBegin>
+            <CharacterOffsetEnd>48</CharacterOffsetEnd>
+            <POS>PRP</POS>
+          </token>
+          <token id="2">
+            <word>is</word>
+            <CharacterOffsetBegin>49</CharacterOffsetBegin>
+            <CharacterOffsetEnd>51</CharacterOffsetEnd>
+            <POS>VBZ</POS>
+          </token>
+          <token id="3">
+            <word>a</word>
+            <CharacterOffsetBegin>52</CharacterOffsetBegin>
+            <CharacterOffsetEnd>53</CharacterOffsetEnd>
+            <POS>DT</POS>
+          </token>
+          <token id="4">
+            <word>great</word>
+            <CharacterOffsetBegin>54</CharacterOffsetBegin>
+            <CharacterOffsetEnd>59</CharacterOffsetEnd>
+            <POS>JJ</POS>
+          </token>
+          <token id="5">
+            <word>university</word>
+            <CharacterOffsetBegin>60</CharacterOffsetBegin>
+            <CharacterOffsetEnd>70</CharacterOffsetEnd>
+            <POS>NN</POS>
+          </token>
+          <token id="6">
+            <word>,</word>
+            <CharacterOffsetBegin>70</CharacterOffsetBegin>
+            <CharacterOffsetEnd>71</CharacterOffsetEnd>
+            <POS>,</POS>
+          </token>
+          <token id="7">
+            <word>founded</word>
+            <CharacterOffsetBegin>72</CharacterOffsetBegin>
+            <CharacterOffsetEnd>79</CharacterOffsetEnd>
+            <POS>VBN</POS>
+          </token>
+          <token id="8">
+            <word>in</word>
+            <CharacterOffsetBegin>80</CharacterOffsetBegin>
+            <CharacterOffsetEnd>82</CharacterOffsetEnd>
+            <POS>IN</POS>
+          </token>
+          <token id="9">
+            <word>1891</word>
+            <CharacterOffsetBegin>83</CharacterOffsetBegin>
+            <CharacterOffsetEnd>87</CharacterOffsetEnd>
+            <POS>CD</POS>
+          </token>
+          <token id="10">
+            <word>.</word>
+            <CharacterOffsetBegin>87</CharacterOffsetBegin>
+            <CharacterOffsetEnd>88</CharacterOffsetEnd>
+            <POS>.</POS>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (NP (PRP It)) (VP (VBZ is) (NP (NP (DT a) (JJ great) (NN university)) (, ,) (VP (VBN founded) (PP (IN in) (NP (CD 1891)))))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="nsubj">
+            <governor idx="5">university</governor>
+            <dependent idx="1">It</dependent>
+          </dep>
+          <dep type="cop">
+            <governor idx="5">university</governor>
+            <dependent idx="2">is</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="5">university</governor>
+            <dependent idx="3">a</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="5">university</governor>
+            <dependent idx="4">great</dependent>
+          </dep>
+          <dep type="partmod">
+            <governor idx="5">university</governor>
+            <dependent idx="7">founded</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="7">founded</governor>
+            <dependent idx="8">in</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="8">in</governor>
+            <dependent idx="9">1891</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="nsubj">
+            <governor idx="5">university</governor>
+            <dependent idx="1">It</dependent>
+          </dep>
+          <dep type="cop">
+            <governor idx="5">university</governor>
+            <dependent idx="2">is</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="5">university</governor>
+            <dependent idx="3">a</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="5">university</governor>
+            <dependent idx="4">great</dependent>
+          </dep>
+          <dep type="partmod">
+            <governor idx="5">university</governor>
+            <dependent idx="7">founded</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="7">founded</governor>
+            <dependent idx="9">1891</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="nsubj">
+            <governor idx="5">university</governor>
+            <dependent idx="1">It</dependent>
+          </dep>
+          <dep type="cop">
+            <governor idx="5">university</governor>
+            <dependent idx="2">is</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="5">university</governor>
+            <dependent idx="3">a</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="5">university</governor>
+            <dependent idx="4">great</dependent>
+          </dep>
+          <dep type="partmod">
+            <governor idx="5">university</governor>
+            <dependent idx="7">founded</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="7">founded</governor>
+            <dependent idx="9">1891</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+      <sentence id="3">
+        <tokens>
+          <token id="1">
+            <word>Stanford</word>
+            <CharacterOffsetBegin>89</CharacterOffsetBegin>
+            <CharacterOffsetEnd>97</CharacterOffsetEnd>
+            <POS>NNP</POS>
+          </token>
+          <token id="2">
+            <word>experienced</word>
+            <CharacterOffsetBegin>98</CharacterOffsetBegin>
+            <CharacterOffsetEnd>109</CharacterOffsetEnd>
+            <POS>VBD</POS>
+          </token>
+          <token id="3">
+            <word>an</word>
+            <CharacterOffsetBegin>110</CharacterOffsetBegin>
+            <CharacterOffsetEnd>112</CharacterOffsetEnd>
+            <POS>DT</POS>
+          </token>
+          <token id="4">
+            <word>earthquake</word>
+            <CharacterOffsetBegin>113</CharacterOffsetBegin>
+            <CharacterOffsetEnd>123</CharacterOffsetEnd>
+            <POS>NN</POS>
+          </token>
+          <token id="5">
+            <word>early</word>
+            <CharacterOffsetBegin>124</CharacterOffsetBegin>
+            <CharacterOffsetEnd>129</CharacterOffsetEnd>
+            <POS>RB</POS>
+          </token>
+          <token id="6">
+            <word>in</word>
+            <CharacterOffsetBegin>130</CharacterOffsetBegin>
+            <CharacterOffsetEnd>132</CharacterOffsetEnd>
+            <POS>IN</POS>
+          </token>
+          <token id="7">
+            <word>its</word>
+            <CharacterOffsetBegin>133</CharacterOffsetBegin>
+            <CharacterOffsetEnd>136</CharacterOffsetEnd>
+            <POS>PRP$</POS>
+          </token>
+          <token id="8">
+            <word>history</word>
+            <CharacterOffsetBegin>137</CharacterOffsetBegin>
+            <CharacterOffsetEnd>144</CharacterOffsetEnd>
+            <POS>NN</POS>
+          </token>
+          <token id="9">
+            <word>.</word>
+            <CharacterOffsetBegin>144</CharacterOffsetBegin>
+            <CharacterOffsetEnd>145</CharacterOffsetEnd>
+            <POS>.</POS>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (NP (NNP Stanford)) (VP (VBD experienced) (ADVP (NP (DT an) (NN earthquake)) (RB early)) (PP (IN in) (NP (PRP$ its) (NN history)))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="nsubj">
+            <governor idx="2">experienced</governor>
+            <dependent idx="1">Stanford</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="4">earthquake</governor>
+            <dependent idx="3">an</dependent>
+          </dep>
+          <dep type="npadvmod">
+            <governor idx="5">early</governor>
+            <dependent idx="4">earthquake</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="2">experienced</governor>
+            <dependent idx="5">early</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="2">experienced</governor>
+            <dependent idx="6">in</dependent>
+          </dep>
+          <dep type="poss">
+            <governor idx="8">history</governor>
+            <dependent idx="7">its</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="6">in</governor>
+            <dependent idx="8">history</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="nsubj">
+            <governor idx="2">experienced</governor>
+            <dependent idx="1">Stanford</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="4">earthquake</governor>
+            <dependent idx="3">an</dependent>
+          </dep>
+          <dep type="npadvmod">
+            <governor idx="5">early</governor>
+            <dependent idx="4">earthquake</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="2">experienced</governor>
+            <dependent idx="5">early</dependent>
+          </dep>
+          <dep type="poss">
+            <governor idx="8">history</governor>
+            <dependent idx="7">its</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="2">experienced</governor>
+            <dependent idx="8">history</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="nsubj">
+            <governor idx="2">experienced</governor>
+            <dependent idx="1">Stanford</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="4">earthquake</governor>
+            <dependent idx="3">an</dependent>
+          </dep>
+          <dep type="npadvmod">
+            <governor idx="5">early</governor>
+            <dependent idx="4">earthquake</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="2">experienced</governor>
+            <dependent idx="5">early</dependent>
+          </dep>
+          <dep type="poss">
+            <governor idx="8">history</governor>
+            <dependent idx="7">its</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="2">experienced</governor>
+            <dependent idx="8">history</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>
