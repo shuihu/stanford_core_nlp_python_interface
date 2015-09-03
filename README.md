@@ -25,7 +25,7 @@ Instructions:
    4. Lastly, you can modify the parameters passed to wrapper.tokenizeAndDepParse.  The first parameter and second parameters
       specify the input and output file/directories, respectively, while the third parameter is the number of threads to use.
       Example input files can be found under the data directory, while by convention, you should put the output files in the
-      output directory.  IF you want to process only a single input file containing JSONified Gmail emails, the first 
+      'output' directory.  IF you want to process only a single input file containing JSONified Gmail emails, the first 
       parameter should be the path to the input .json file, while the second parameter should be path to the output .json 
       file. If you want to process multiple files, create a .txt file with each line spelling out the path to an input .json 
       file.  The first parameter to wrapper.tokenizeAndDepParse should then be the path to the .txt file, while the second 
@@ -35,7 +35,7 @@ Instructions:
    Both fields are arrays, with one element for each sentence in the email.  For each sentence, the tokenized_body field
    contains a list of the tokens, while the dependency_parsed_body field contains a list of dependencies.  Each dependency
    consists of the relation, the head, and the dependent.  The list of dependencies constitute a dependency parse tree for
-   the sentence.  Example output can be found in the output directory.
+   the sentence.  Example output can be found in the 'output' directory.
 
 To use StanfordCoreNLPWrapper in a different repo, just move the jar files into your repo.  The necessary jars are listed in
 the second parameter to startJVM in JPypeExample.
