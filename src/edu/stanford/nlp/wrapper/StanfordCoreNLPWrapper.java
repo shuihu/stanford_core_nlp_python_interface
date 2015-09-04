@@ -44,7 +44,7 @@ public class StanfordCoreNLPWrapper {
 	return concats;
   }
   
-  private static List<Runnable> createProcessFileRunnables(StanfordCoreNLP stanfordCoreNLP, final List<String> inputFilenames, final List<String> outputFilenames) {
+  private static List<Runnable> createProcessFileRunnables(final StanfordCoreNLP stanfordCoreNLP, final List<String> inputFilenames, final List<String> outputFilenames) {
     List<Runnable> runnables = new LinkedList<Runnable>();
 	int numFiles = inputFilenames.size();
 	List<Integer> range = new LinkedList<Integer>();
@@ -57,7 +57,7 @@ public class StanfordCoreNLPWrapper {
           public void run() {
         	try {
         	  processFile(stanfordCoreNLP, inputFilenames.get(i), outputFilenames.get(i));
-        	} catch(IOException e) {
+        	} catch(Exception e) {
               System.out.println("Failure when processing " + inputFilenames.get(i) + " into " + outputFilenames.get(i) + ":");
               System.out.println(e.toString());
         	}
@@ -68,12 +68,10 @@ public class StanfordCoreNLPWrapper {
 	return runnables;
   }
   
-  private static void writeJsons(List<JSONObject> jsons, String filename) {
+  private static void writeJsonArray(JSONArray jsonArray, String filename) {
 	try {
 	  PrintWriter writer = new PrintWriter(filename);
-	  for (JSONObject json : jsons) {
-	    writer.println(json.toJSONString());
-      }
+	  writer.println(jsonArray.toJSONString());
       writer.close();
 	} catch(Exception e) {
       System.out.println("Writing to " + filename + " failed:");
@@ -123,16 +121,15 @@ public class StanfordCoreNLPWrapper {
 	return allDepTrees;
   }
   
-  private static void processFile(StanfordCoreNLP stanfordCoreNLP, String inputFilename, String outputFilename) throws IOException {
+  private static void processFile(StanfordCoreNLP stanfordCoreNLP, String inputFilename, String outputFilename) throws IOException, ParseException {
 	JSONParser parser = new JSONParser();
-	List<String> emailJsonStrings = readFileList(inputFilename);
-	List<JSONObject> emailJsons = new LinkedList<JSONObject>();
+	String emailJsonsString = readFileList(inputFilename).get(0);
+	JSONArray emailJsonArray = (JSONArray) (parser.parse(emailJsonsString));
 	int emailIndex = 0;
-	for (String emailJsonString : emailJsonStrings) {
+	for (Object emailObject : emailJsonArray) {
       try {
-        JSONObject emailJson = (JSONObject) (parser.parse(emailJsonString));
-        emailJsons.add(emailJson);
-        String rawEmailText = (String) emailJson.get("text");
+    	JSONObject emailJson = (JSONObject) emailObject;
+        String rawEmailText = (String) emailJson.get("body");
         if (rawEmailText != null) {
     	  String unescapedEmailText = rawEmailText.replaceAll("\\n", "\n").replaceAll("\\\"", "\"");
     	  Annotation annotation = stanfordCoreNLP.process(unescapedEmailText);
@@ -145,7 +142,7 @@ public class StanfordCoreNLPWrapper {
       }
       emailIndex++;
 	}
-	writeJsons(emailJsons, outputFilename);
+	writeJsonArray(emailJsonArray, outputFilename);
   }
   
   public static void tokenizeAndDepParse(String inputName, String outputName, int numThreads) {
