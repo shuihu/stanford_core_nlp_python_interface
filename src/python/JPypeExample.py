@@ -5,7 +5,7 @@ startJVM("/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/MacOS/libjl
 wrapperPkg = JPackage('edu').stanford.nlp.wrapper
 wrapper = wrapperPkg.StanfordCoreNLPWrapper
 
-wrapper.tokenizeAndDepParse("data/enron1.json", "output/enron1.json", 1)
+wrapper.tokenizeAndDepParse("data/enron3_4.txt", "output", 2)
 print 'Python called Java successfully'
 
 shutdownJVM()
